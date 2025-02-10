@@ -1,3 +1,17 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-database.js";
+
+const firebaseConfig = {
+
+    dataBaseURL: import.meta.env.VITE_DATABASE_URL,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID
+}
+
+const app = initializeApp(firebaseConfig)
+const database = getDatabase(app)
+
+console.log(database)
+
 let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
